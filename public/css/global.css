@@ -1,0 +1,242 @@
+
+body {
+    width:100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Main Menu Container */
+.pc-menu-container {
+    width: 100vw;
+    max-width: 98vw;
+    height: 96.56px;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.mobile-header-container {
+    height: 64px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    background: black;
+    padding: 16px;
+    border-bottom: 3px solid #FFC72C;
+}
+
+.mobile-body-container{
+    display: none;
+    overflow: hidden;
+    transition: height 0.5 ease-in-out;
+}
+
+.mobile-body-container.show{
+    height: calc(95vh - 64px);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-between;
+    align-items: stretch;
+    background-color: black;
+}
+
+/* Main Menu */
+.main-menu {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    z-index: 5;
+    position: relative;
+}
+
+.main-menu > li {
+    position: relative;
+    list-style: none;
+    height: 96.56px;
+    display: flex;
+    align-items: center;
+}
+
+.main-menu > li:not(#logo):hover {
+    border-bottom: 4px solid #FFC72C;
+    cursor: pointer;
+}
+
+.main-menu > li:hover > a {
+    color: #FFC72C;
+}
+
+.main-menu > li > a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: background-color 0.3s;
+}
+
+/* Dropdown Menu */
+.dropdown {
+    width: 100%;
+    background-color: #303030;
+    display: none;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 32px 300px;
+    gap: 24px;
+}
+
+.dropdown-items{
+    display: none;
+}
+
+.dropdown a {
+    padding: 10px;
+    color: white;
+    background: rgba(255, 255, 255, 0.5);
+    text-decoration: none;
+    border-radius: 8px;
+    padding: 16px;
+    transition: background-color 0.3s;
+}
+
+.dropdown a:hover {
+    color:black;
+    background-color: #FFC72C;
+}
+
+.main-menu > li:hover .dropdown {
+    display: flex;
+}
+
+/* Secondary Menu */
+.secondary-menu {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.secondary-menu > li {
+    list-style: none;
+}
+
+.secondary-menu > li > a {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: background-color 0.3s;
+}
+
+.secondary-menu .logo-item {
+    border-left: 1px solid white;
+    padding-left: 20px;
+}
+
+.logo-item img {
+    height: 40px;
+}
+
+hamburger-icon {
+    display: block;
+    width: 32px;
+}
+
+.close-icon{
+    display: none;
+    width: 32px;
+}
+
+.mobile-body-container > div {
+    width:100%;
+}
+
+.mobile-body-bottom {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.mobile-unir{
+    width: 180px;
+    height: 32px;
+    margin-bottom: 40px;
+    background-position: center;
+    background-size: cover;
+    background-image: url(../images/unirLogo.png);
+}
+
+.mobile-menu{
+    display: block;
+    position: relative;
+    padding: 0;
+    margin: 0;
+}
+
+.mobile-menu > li{
+    list-style: none;
+    border-bottom: 1px solid #8C8C8C;
+}
+
+.mobile-item{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px;
+}
+
+.mobile-menu > a, .mobile-dropdown-items > a, .mobile-item > a {
+    color: white;
+    text-decoration: none;
+}
+
+.close-dropdown{
+    display: none;
+}
+
+.display-dropdown{
+    display: block;
+}
+
+.mobile-dropdown-items{
+    display: none;
+    background: #3A3A3A;
+    color: white;
+    text-decoration: none;
+}
+
+.mobile-dropdown-items > a{
+    display: block;
+    padding: 16px;
+    text-decoration: none;
+    color: white;
+    border-bottom: 1px solid #4e4e4e;
+}
+
+@media (max-width: 1350px) {
+    .pc-menu-container, #dropdown {
+        display: none;
+    }
+
+    .mobile-menu-container {
+        display: block;
+    }
+}
