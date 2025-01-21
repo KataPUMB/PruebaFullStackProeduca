@@ -99,9 +99,10 @@ body {
 }
 
 .dropdown a {
+    min-width: 244.8px;
     padding: 10px;
     color: white;
-    background: rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.05);
     text-decoration: none;
     border-radius: 8px;
     padding: 16px;
@@ -122,6 +123,7 @@ body {
     display: flex;
     align-items: center;
     gap: 20px;
+    height: 100%;
 }
 
 .secondary-menu > li {
@@ -145,6 +147,12 @@ body {
 .secondary-menu .logo-item {
     border-left: 1px solid white;
     padding-left: 20px;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
 }
 
 .logo-item img {
@@ -229,6 +237,10 @@ hamburger-icon {
     text-decoration: none;
     color: white;
     border-bottom: 1px solid #4e4e4e;
+}
+
+.mobile-menu-container {
+    display: none;
 }
 
 @media (max-width: 1350px) {
